@@ -4,6 +4,10 @@ Rails.application.routes.draw do
       post 'login', to: 'authentications#create'
 
       resources :users
+
+      namespace :import do
+        resources :products, only: :create
+      end
     end
   end
 end

@@ -2,7 +2,7 @@ namespace :db do
   desc "Generate Sample Data"
   task generate_sample_data: :environment do
     ActiveRecord::Base.transaction do
-      puts "0.Creating Category"
+      puts "0. Creating Category"
       Category.create! [
         {name: "Desktop Hardwares"},
         {name: "Laptops"},
@@ -11,7 +11,7 @@ namespace :db do
         {name: "Storage Devices"},
       ]
 
-      puts "1.Creating Customer Type"
+      puts "1. Creating Customer Type"
       CustomerType.create! [
         {name: "Individual"},
         {name: "Company"}
